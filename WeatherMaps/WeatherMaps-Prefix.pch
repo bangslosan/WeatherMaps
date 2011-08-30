@@ -13,3 +13,8 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
 #endif
+
+
+#define TILE_SIZE 256.0 // Tile image size.
+#define TEMPERATURE @"weather_f_kph" // Temperature type. (weather_f_kph:°F, weather_c_kph:°C)
+#define CHAR_INVERT 0 // Font Color (0:White, 1:Black) 

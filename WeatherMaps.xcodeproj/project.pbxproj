@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1376DB27140C62B200685591 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1376DB25140C62B200685591 /* License.txt */; };
+		1376DB28140C62B200685591 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1376DB26140C62B200685591 /* ReadMe.txt */; };
 		138C09B2140B3559009BEA7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C09B1140B3559009BEA7B /* UIKit.framework */; };
 		138C09B4140B3559009BEA7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C09B3140B3559009BEA7B /* Foundation.framework */; };
 		138C09B6140B3559009BEA7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C09B5140B3559009BEA7B /* CoreGraphics.framework */; };
@@ -18,25 +20,41 @@
 		138C09CA140B3559009BEA7B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138C09C8140B3559009BEA7B /* MainWindow.xib */; };
 		138C09CD140B3559009BEA7B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C09CC140B3559009BEA7B /* RootViewController.m */; };
 		138C09D0140B3559009BEA7B /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138C09CE140B3559009BEA7B /* RootViewController.xib */; };
+		138C0A0F140B35E5009BEA7B /* WeatherOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C0A0E140B35E5009BEA7B /* WeatherOverlay.m */; };
+		138C0A12140B35F4009BEA7B /* WeatherOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C0A11140B35F4009BEA7B /* WeatherOverlayView.m */; };
+		138C0A14140B36C3009BEA7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C0A13140B36C3009BEA7B /* MapKit.framework */; };
+		138C0A1E140B3952009BEA7B /* TileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C0A1D140B3952009BEA7B /* TileManager.m */; };
+		138C0A2A140B3FB9009BEA7B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C0A29140B3FB9009BEA7B /* Tile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1376DB25140C62B200685591 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		1376DB26140C62B200685591 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		138C09AD140B3559009BEA7B /* WeatherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138C09B1140B3559009BEA7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		138C09B3140B3559009BEA7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		138C09B5140B3559009BEA7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		138C09B7140B3559009BEA7B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		138C09BB140B3559009BEA7B /* WeatherMaps-Info.plist */ = {isa = PBXFileReference; path = "WeatherMaps-Info.plist"; sourceTree = "<group>"; };
+		138C09BB140B3559009BEA7B /* WeatherMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeatherMaps-Info.plist"; sourceTree = "<group>"; };
 		138C09BD140B3559009BEA7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		138C09BF140B3559009BEA7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		138C09C1140B3559009BEA7B /* WeatherMaps-Prefix.pch */ = {isa = PBXFileReference; path = "WeatherMaps-Prefix.pch"; sourceTree = "<group>"; };
-		138C09C2140B3559009BEA7B /* WeatherMapsAppDelegate.h */ = {isa = PBXFileReference; path = WeatherMapsAppDelegate.h; sourceTree = "<group>"; };
+		138C09C1140B3559009BEA7B /* WeatherMaps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherMaps-Prefix.pch"; sourceTree = "<group>"; };
+		138C09C2140B3559009BEA7B /* WeatherMapsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherMapsAppDelegate.h; sourceTree = "<group>"; };
 		138C09C3140B3559009BEA7B /* WeatherMapsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherMapsAppDelegate.m; sourceTree = "<group>"; };
 		138C09C6140B3559009BEA7B /* WeatherMaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherMaps.xcdatamodel; sourceTree = "<group>"; };
 		138C09C9140B3559009BEA7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		138C09CB140B3559009BEA7B /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		138C09CB140B3559009BEA7B /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		138C09CC140B3559009BEA7B /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		138C09CF140B3559009BEA7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		138C0A0D140B35E5009BEA7B /* WeatherOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherOverlay.h; sourceTree = "<group>"; };
+		138C0A0E140B35E5009BEA7B /* WeatherOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherOverlay.m; sourceTree = "<group>"; };
+		138C0A10140B35F4009BEA7B /* WeatherOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherOverlayView.h; sourceTree = "<group>"; };
+		138C0A11140B35F4009BEA7B /* WeatherOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherOverlayView.m; sourceTree = "<group>"; };
+		138C0A13140B36C3009BEA7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		138C0A1C140B3952009BEA7B /* TileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileManager.h; sourceTree = "<group>"; };
+		138C0A1D140B3952009BEA7B /* TileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileManager.m; sourceTree = "<group>"; };
+		138C0A28140B3FB9009BEA7B /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		138C0A29140B3FB9009BEA7B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138C0A14140B36C3009BEA7B /* MapKit.framework in Frameworks */,
 				138C09B2140B3559009BEA7B /* UIKit.framework in Frameworks */,
 				138C09B4140B3559009BEA7B /* Foundation.framework in Frameworks */,
 				138C09B6140B3559009BEA7B /* CoreGraphics.framework in Frameworks */,
@@ -54,10 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1376DB24140C62B200685591 /* TileMap */ = {
+			isa = PBXGroup;
+			children = (
+				1376DB25140C62B200685591 /* License.txt */,
+				1376DB26140C62B200685591 /* ReadMe.txt */,
+			);
+			name = TileMap;
+			path = WeatherMaps/TileMap;
+			sourceTree = "<group>";
+		};
 		138C09A2140B3558009BEA7B = {
 			isa = PBXGroup;
 			children = (
 				138C09B9140B3559009BEA7B /* WeatherMaps */,
+				1376DB24140C62B200685591 /* TileMap */,
 				138C09B0140B3559009BEA7B /* Frameworks */,
 				138C09AE140B3559009BEA7B /* Products */,
 			);
@@ -74,6 +104,7 @@
 		138C09B0140B3559009BEA7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				138C0A13140B36C3009BEA7B /* MapKit.framework */,
 				138C09B1140B3559009BEA7B /* UIKit.framework */,
 				138C09B3140B3559009BEA7B /* Foundation.framework */,
 				138C09B5140B3559009BEA7B /* CoreGraphics.framework */,
@@ -85,13 +116,15 @@
 		138C09B9140B3559009BEA7B /* WeatherMaps */ = {
 			isa = PBXGroup;
 			children = (
-				138C09C2140B3559009BEA7B /* WeatherMapsAppDelegate.h */,
-				138C09C3140B3559009BEA7B /* WeatherMapsAppDelegate.m */,
-				138C09C8140B3559009BEA7B /* MainWindow.xib */,
-				138C09CB140B3559009BEA7B /* RootViewController.h */,
-				138C09CC140B3559009BEA7B /* RootViewController.m */,
-				138C09CE140B3559009BEA7B /* RootViewController.xib */,
-				138C09C5140B3559009BEA7B /* WeatherMaps.xcdatamodeld */,
+				138C0A0C140B35BE009BEA7B /* Model */,
+				138C0A09140B359B009BEA7B /* App Delegate */,
+				138C0A0B140B35AB009BEA7B /* Controller */,
+				138C0A0D140B35E5009BEA7B /* WeatherOverlay.h */,
+				138C0A0E140B35E5009BEA7B /* WeatherOverlay.m */,
+				138C0A10140B35F4009BEA7B /* WeatherOverlayView.h */,
+				138C0A11140B35F4009BEA7B /* WeatherOverlayView.m */,
+				138C0A1C140B3952009BEA7B /* TileManager.h */,
+				138C0A1D140B3952009BEA7B /* TileManager.m */,
 				138C09BA140B3559009BEA7B /* Supporting Files */,
 			);
 			path = WeatherMaps;
@@ -106,6 +139,36 @@
 				138C09C1140B3559009BEA7B /* WeatherMaps-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		138C0A09140B359B009BEA7B /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				138C09C2140B3559009BEA7B /* WeatherMapsAppDelegate.h */,
+				138C09C3140B3559009BEA7B /* WeatherMapsAppDelegate.m */,
+				138C09C8140B3559009BEA7B /* MainWindow.xib */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		138C0A0B140B35AB009BEA7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				138C09CB140B3559009BEA7B /* RootViewController.h */,
+				138C09CC140B3559009BEA7B /* RootViewController.m */,
+				138C09CE140B3559009BEA7B /* RootViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		138C0A0C140B35BE009BEA7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				138C09C5140B3559009BEA7B /* WeatherMaps.xcdatamodeld */,
+				138C0A28140B3FB9009BEA7B /* Tile.h */,
+				138C0A29140B3FB9009BEA7B /* Tile.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +221,8 @@
 				138C09BE140B3559009BEA7B /* InfoPlist.strings in Resources */,
 				138C09CA140B3559009BEA7B /* MainWindow.xib in Resources */,
 				138C09D0140B3559009BEA7B /* RootViewController.xib in Resources */,
+				1376DB27140C62B200685591 /* License.txt in Resources */,
+				1376DB28140C62B200685591 /* ReadMe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +237,10 @@
 				138C09C4140B3559009BEA7B /* WeatherMapsAppDelegate.m in Sources */,
 				138C09C7140B3559009BEA7B /* WeatherMaps.xcdatamodeld in Sources */,
 				138C09CD140B3559009BEA7B /* RootViewController.m in Sources */,
+				138C0A0F140B35E5009BEA7B /* WeatherOverlay.m in Sources */,
+				138C0A12140B35F4009BEA7B /* WeatherOverlayView.m in Sources */,
+				138C0A1E140B3952009BEA7B /* TileManager.m in Sources */,
+				138C0A2A140B3FB9009BEA7B /* Tile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +358,7 @@
 				138C09D5140B3559009BEA7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
