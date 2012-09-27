@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  WLAppDelegate.h
 //  WeatherMaps
 //
 //  Created by Watanabe Toshinori on 11/08/28.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 
-@interface RootViewController : UIViewController
+@interface WLAppDelegate : NSObject <UIApplicationDelegate>
 
-@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

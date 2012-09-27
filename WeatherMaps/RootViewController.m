@@ -7,36 +7,18 @@
 //
 
 #import "RootViewController.h"
-#import "WeatherOverlay.h"
-#import "WeatherOverlayView.h"
-#import "TileManager.h"
-
+#import "WLWeatherLayer.h"
+#import "WLWeatherLayerView.h"
 
 @interface RootViewController ()
-@property (nonatomic, retain) WeatherOverlayView *overlayView_;
+@property (nonatomic, strong) WLWeatherLayer *weatherLayer;
 @end
 
 @interface RootViewController (MKMapViewDelegate) <MKMapViewDelegate>
 @end
 
 
-
 @implementation RootViewController
-
-@synthesize mapView_;
-@synthesize overlayView_;
-
-
-#pragma mark - Instance
-
-- (void)dealloc
-{
-    [self viewDidUnload];
-    
-    self.overlayView_ = nil;
-    
-    [super dealloc];
-}
 
 
 #pragma mark - View lifecycle
@@ -46,16 +28,35 @@
     [super viewDidLoad];
     
     self.title = @"Weather";
+ 
+    self.weatherLayer = [[WLWeatherLayer alloc] init];
 
-    WeatherOverlay *overlay = [[WeatherOverlay new] autorelease];
-    [mapView_ addOverlay:overlay];
+    [self.mapView addOverlay:self.weatherLayer];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+#pragma mark - Actions
 
-    self.mapView_ = nil;
+- (IBAction)fontColorChanged:(UISegmentedControl *)sender
+{
+    self.weatherLayer.color = sender.selectedSegmentIndex;
+    
+    [self reloadLayer];
+}
+
+- (IBAction)unitTypeChanged:(UISegmentedControl *)sender
+{
+    self.weatherLayer.unitType = sender.selectedSegmentIndex;
+
+    [self reloadLayer];
+}
+
+
+#pragma mark - Private method
+
+- (void)reloadLayer
+{
+    [self.mapView removeOverlay:self.weatherLayer];
+    [self.mapView addOverlay:self.weatherLayer];
 }
 
 @end
@@ -66,20 +67,12 @@
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
-    if (!overlayView_) {
-        self.overlayView_ = [[[WeatherOverlayView alloc] initWithOverlay:overlay] autorelease];
+    if (overlay == self.weatherLayer) {
+        WLWeatherLayerView *view = [[WLWeatherLayerView alloc] initWithOverlay:overlay];
+        return view;
     }
-    return overlayView_;
-}
-
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    MKMapRect mapRect = mapView_.visibleMapRect;
-    MKZoomScale zoomScale = mapView.bounds.size.width / mapView.visibleMapRect.size.width;
     
-    [[TileManager sharedTileManager] loadTilesInMapRect:mapRect zoomScale:zoomScale completion:^{
-        [overlayView_ setNeedsDisplayInMapRect:mapView_.visibleMapRect];
-    }];
+    return nil;
 }
 
 @end
